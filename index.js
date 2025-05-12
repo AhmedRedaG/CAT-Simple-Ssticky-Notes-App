@@ -2,6 +2,10 @@ import express from "express";
 
 import { connectDb, getDb } from "./database/db.js";
 
+import notesRouter from "./routes/notes.js";
+import rootRouter from "./routes/root.js";
+import errorRouter from "./routes/error.js";
+
 const app = express();
 
 const port = 3000;
@@ -22,4 +26,9 @@ export { db };
 
 app.use(express.json());
 app.use(express.static("public"));
+
 app.set("view engine", "ejs");
+
+app.use("/notes", notesRouter);
+app.use(rootRouter);
+app.use(errorRouter);
