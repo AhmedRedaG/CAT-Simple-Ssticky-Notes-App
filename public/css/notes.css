@@ -1,0 +1,49 @@
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+}
+.note {
+  background-color: #fff9c4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  position: relative;
+}
+.note h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+.note p {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+}
+.note-buttons {
+  display: flex;
+  gap: 10px;
+}
+.note-buttons button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+.note-buttons .update-btn {
+  background-color: #4a90e2;
+  color: white;
+}
+.note-buttons .update-btn:hover {
+  background-color: #2a6496;
+}
+.note-buttons .delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+.note-buttons .delete-btn:hover {
+  background-color: #c0392b;
+}
