@@ -1,0 +1,19 @@
+{
+  "name": "cat-simple-ssticky-notes-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedRedaG/CAT-Simple-Ssticky-Notes-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedRedaG/CAT-Simple-Ssticky-Notes-App/issues"
+  },
+  "homepage": "https://github.com/AhmedRedaG/CAT-Simple-Ssticky-Notes-App#readme",
+  "description": ""
+}
