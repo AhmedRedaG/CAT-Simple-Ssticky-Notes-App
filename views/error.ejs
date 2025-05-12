@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sticky Notes - Error</title>
-  </head>
-  <body>
-    <header>
-      <h1>Sticky Notes</h1>
-    </header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="notes.html">View Notes</a>
-      <a href="add-note.html">Add Note</a>
-    </nav>
-    <div class="error-container">
-      <h2>Oops! Something Went Wrong</h2>
-      <p>An error occurred while processing your request.</p>
-      <p>
-        Please try again or return to the <a href="index.html">homepage</a>.
-      </p>
-    </div>
-    <footer>&copy; 2025 Sticky Notes App</footer>
-  </body>
-</html>
+<%- include("includes/header") %>
+
+<link rel="stylesheet" href="css/error.css" />
+
+<%- include("includes/nav") %>
+
+<div class="error-container">
+  <h2>Oops! Something Went Wrong</h2>
+  <p>An error occurred while processing your request.</p>
+  <p>Please try again or return to the <a href="index.html">homepage</a>.</p>
+</div>
+
+<%- include("includes/footer") %>

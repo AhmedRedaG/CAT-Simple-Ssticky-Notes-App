@@ -1,4 +1,4 @@
-import Notes from "../models/Note.js";
+import Notes from "../models/notes.js";
 
 export const getNotes = (req, res) => {
   Notes.getNotes().then((notes) => {

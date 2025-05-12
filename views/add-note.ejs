@@ -1,31 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sticky Notes - Add Note</title>
-  </head>
-  <body>
-    <header>
-      <h1>Sticky Notes</h1>
-    </header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="notes.html">View Notes</a>
-      <a href="add-note.html">Add Note</a>
-    </nav>
-    <div class="form-container">
-      <h2>Add a New Note</h2>
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" required />
-      </div>
-      <div class="form-group">
-        <label for="content">Content</label>
-        <textarea id="content" name="content" required></textarea>
-      </div>
-      <button class="submit-btn" onclick="addNote()">Add Note</button>
-    </div>
-    <footer>&copy; 2025 Sticky Notes App</footer>
-  </body>
-</html>
+<%- include("includes/header") %>
+
+<link rel="stylesheet" href="css/add-note.css" />
+
+<%- include("includes/nav") %>
+
+<div class="form-container">
+  <h2>Add a New Note</h2>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" required />
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea id="content" name="content" required></textarea>
+  </div>
+  <button class="submit-btn" onclick="addNote()">Add Note</button>
+</div>
+
+<%- include("includes/footer") %>
