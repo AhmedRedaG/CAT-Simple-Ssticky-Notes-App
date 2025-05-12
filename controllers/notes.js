@@ -7,7 +7,7 @@ export const getNotes = (req, res) => {
 };
 
 export const getAddNote = (req, res) => {
-  res.render("addNote");
+  res.render("add-note");
 };
 
 export const postAddNote = (req, res) => {

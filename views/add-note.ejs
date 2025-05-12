@@ -1,10 +1,10 @@
 <%- include("includes/header") %>
 
-<link rel="stylesheet" href="css/add-note.css" />
+<link rel="stylesheet" href="/css/add-note.css" />
 
 <%- include("includes/nav") %>
 
-<div class="form-container">
+<form class="form-container" action="/notes/add-note" method="POST">
   <h2>Add a New Note</h2>
   <div class="form-group">
     <label for="title">Title</label>
@@ -14,7 +14,7 @@
     <label for="content">Content</label>
     <textarea id="content" name="content" required></textarea>
   </div>
-  <button class="submit-btn" onclick="addNote()">Add Note</button>
-</div>
+  <button class="submit-btn" type="submit">Add Note</button>
+</form>
 
 <%- include("includes/footer") %>
