@@ -4,19 +4,21 @@ import {
   getNotes,
   getAddNote,
   postAddNote,
-  updateNote,
-  deleteNote,
+  getUpdateNote,
+  postUpdateNote,
+  getDeleteNote,
 } from "../controllers/notes.js";
 
 const router = Router();
 
 router.get("/", getNotes);
 
-router.get("/add-note", getAddNote);
-router.post("/add-note", postAddNote);
+router.get("/add", getAddNote);
+router.post("/add", postAddNote);
 
-router.patch("/update/:id", updateNote);
+router.get("/update/:id", getUpdateNote);
+router.post("/update/:id", postUpdateNote);
 
-router.delete("/delete/:id", deleteNote);
+router.get("/delete/:id", getDeleteNote);
 
 export default router;

@@ -13,8 +13,8 @@
         <h3><%= note.title %></h3>
         <p><%= note.content %></p>
         <div class="note-buttons">
-          <button class="update-btn" >Update</button>
-          <button class="delete-btn"">Delete</button>
+          <button class="update-btn" ><a href="/notes/update/<%= note._id %>">Update</a></button>
+          <button class="delete-btn""><a href="/notes/delete/<%= note._id %>">Delete</a></button>
         </div>
       </div>
     <% }) %>

@@ -3,7 +3,7 @@ import { Router } from "express";
 const router = Router();
 
 router.use((req, res) => {
-  res.render("error");
+  res.render("error", { pageTitle: "Error" });
 });
 
 export default router;

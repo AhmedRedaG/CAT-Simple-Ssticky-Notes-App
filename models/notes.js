@@ -5,6 +5,10 @@ class Notes {
     return db.collection("notes").find().toArray();
   }
 
+  static getNote(id) {
+    return db.collection("notes").findOne({ _id: id });
+  }
+
   static addNote(note) {
     return db.collection("notes").insertOne(note);
   }

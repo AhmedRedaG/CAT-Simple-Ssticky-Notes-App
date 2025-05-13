@@ -2,12 +2,12 @@ import Notes from "../models/notes.js";
 
 export const getNotes = (req, res) => {
   Notes.getNotes().then((notes) => {
-    res.render("notes", { notes });
+    res.render("notes", { pageTitle: "Notes", notes });
   });
 };
 
 export const getAddNote = (req, res) => {
-  res.render("add-note");
+  res.render("add-note", { pageTitle: "Add Note", update: false });
 };
 
 export const postAddNote = (req, res) => {
@@ -17,7 +17,14 @@ export const postAddNote = (req, res) => {
   });
 };
 
-export const updateNote = (req, res) => {
+export const getUpdateNote = (req, res) => {
+  const id = req.params.id;
+  Notes.getNote(id).then((note) => {
+    res.render("add-note", { pageTitle: "Update Note", update: true, note });
+  });
+};
+
+export const postUpdateNote = (req, res) => {
   const note = req.body;
   const id = req.params.id;
   Notes.updateNote(id, note).then(() => {
@@ -25,7 +32,7 @@ export const updateNote = (req, res) => {
   });
 };
 
-export const deleteNote = (req, res) => {
+export const getDeleteNote = (req, res) => {
   const id = req.params.id;
   Notes.deleteNote(id).then(() => {
     res.redirect("/notes");
