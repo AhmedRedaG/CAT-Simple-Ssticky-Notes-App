@@ -19,7 +19,10 @@ export const postAddNote = (req, res) => {
 
 export const getUpdateNote = (req, res) => {
   const id = req.params.id;
+
   Notes.getNote(id).then((note) => {
+    console.log(note);
+
     res.render("add-note", { pageTitle: "Update Note", update: true, note });
   });
 };

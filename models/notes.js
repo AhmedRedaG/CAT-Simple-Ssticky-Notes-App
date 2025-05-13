@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import { db } from "../index.js";
 
 class Notes {
@@ -6,7 +7,7 @@ class Notes {
   }
 
   static getNote(id) {
-    return db.collection("notes").findOne({ _id: id });
+    return db.collection("notes").findOne({ _id: new ObjectId(id) });
   }
 
   static addNote(note) {
@@ -14,11 +15,13 @@ class Notes {
   }
 
   static deleteNote(id) {
-    return db.collection("notes").deleteOne({ _id: id });
+    return db.collection("notes").deleteOne({ _id: new ObjectId(id) });
   }
 
   static updateNote(id, note) {
-    return db.collection("notes").updateOne({ _id: id }, { $set: note });
+    return db
+      .collection("notes")
+      .updateOne({ _id: new ObjectId(id) }, { $set: note });
   }
 }
 
